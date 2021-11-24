@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>420</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.cg.dms.repository::IPaymentRepository
+--
+--
++insertCompanyToFarmerPayment(Payment payment): Payment
++insertDealerToComapnyPayment(Payment payment): Payment
++insertCustomerToDelearPayment(Payment payment): Payment
++viewAllpaymentsCustomer(int customerId): List&lt;Payment&gt;
++viewAllpaymentsDealer(int delearId): List&lt;Payment&gt;
++viewAllpaymentsCompany(int companyId): List&lt;Payment&gt;
++calculateBillForCustomer(int customerId): Payment
++calculateBillForDealer(int dealerId): Payment
++calculateBillForCompany(int companyId): Payment
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>10</y>
+      <w>310</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.cg.dms.repository::IDelearRepository
+--
+--
++insertDealer(Dealer dealer): Dealer
++updateDealer(Dealer dealer): Dealer
++deleteDealer(Dealer dealer): Dealer
++getDealer(int dealerId): List&lt;Dealer&gt;
++getAllCustomers(): List&lt;Customer&gt;
++getCustomer(int customerId): List&lt;Customer&gt;
++getAllCompanys(): List&lt;Company&gt;
++getCompany(int comapnyId): Company
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>250</y>
+      <w>320</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.cg.dms.repository::ICompanyRepository
+--
+--
++insertCompany(Company company): Company
++updateCompany(Company company): Company
++deleteCompany(Company company): Company
++getAllFormers(): List&lt;Farmer&gt;
++getFormer(int farmerId): Farmer
++getAllDealers(): List&lt;Dealer&gt;
++getDealer(int dealerId): List&lt;Dealer&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>250</y>
+      <w>390</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.cg.dms.repository::IFormerRepository
+--
+--
++validateFarmer(String username, String password): Farmer
++addFarmer(Farmer user): Farmer
++updateFarmer(Farmer user): Farmer
++getAllFarmer(): List&lt;Farmer&gt;
++getFarmer(int dealerId): List&lt;Farmer&gt;
++getCompany(): Company
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>250</y>
+      <w>420</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+com.cg.dms.repository::ICustomerRepository
+--
+--
++insertCustomer(Customer customer): Customer
++updateCustomer(Customer customer): Customer
++deleteCustomer(Customer customer): Customer
++viewCustomer(int customerId): Customer
++validateCustomer(String username, String password): Customer
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
